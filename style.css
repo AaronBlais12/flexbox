@@ -1,2 +1,72 @@
-git add .
-git commit -m "initial commit"
+/* flexbox is a module dividing our wireframe 
+divides wireframes into parent and child containers
+uses custom properties and values 
+it uses the pattern of parents controlling children
+
+*/
+
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent-container {background-color: #6689cc;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    /* justify-content: flex-end;  */
+    /* justify-content: space-between; */
+    /* justify-content:space-around */
+    /* aligns along main axis */
+}
+
+
+.menu-items {
+    display: flex; 
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: stretch 
+}
+.nav-link    {
+    color: white;
+    text-decoration: none; 
+
+    display: flex;
+    align-items:center
+    /* aligns along the cross axis */
+    gap: 1em;
+    /* controls the space between children */
+
+}
+
+.nav-link:nth-child(1){ 
+    order: 1; 
+}
+
+.nav-link:nth-child(2){
+    order: 5;
+}
+
+/* nth child allows access to element through its node position 
+order modfies the default order of elements */
+
+
+#logo {
+    width: 3em;
+    padding-right: 5em;
+    padding-left: 1em;
+}
+
+/* display property enables container powers
+flex-direction defines main and cross axes */
+/* flex-wrap enables break into next line when resizing */
+
+.nav-link:nth-child(3) {
+    align-self: flex-end;
+    /* cross axis alignment of individual children */
+}   
